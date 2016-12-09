@@ -13,7 +13,8 @@ public class Main {
 	
 	public static void main(String[] args) throws Exception {
 		ClientBuilder clientBuilder = new ClientBuilder();
-		clientBuilder.withToken("INSERT TOKEN HERE");
+		String token = "MjU2NDM0MzM2MjI2NzM4MTc2.CysIdg.cujiDEjRed9DvOkzS6cj-OKjzyw";
+		clientBuilder.withToken(token);
 		IDiscordClient client = clientBuilder.login();
 
 		EventDispatcher dispatcher = client.getDispatcher();
@@ -39,8 +40,12 @@ public class Main {
 						client.logout();
 					} else if (message.getContent().toLowerCase().contains("knock knock")){
 						message.getChannel().sendMessage("Who's there?");
+					} else if (message.getContent().toLowerCase().contains("buster")){
+						message.getChannel().sendMessage("B-Buster is a h-hentai!");
+					} else if (message.getContent().toLowerCase().contains("god")){
+							message.getChannel().sendMessage("The only god of this server is S-Squishhh s-sama!");
 					} else {
-						message.getChannel().sendMessage("reply");
+						message.getChannel().sendMessage("Y-You want loods don't you?");
 					}
 				} catch (Exception e) {
 					e.printStackTrace();

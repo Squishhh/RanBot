@@ -27,7 +27,7 @@ public class ChooserCommandHandler implements CommandHandler {
 			channel.sendMessage("There is nothing to choose >:(");
 			return;
 		}
-
+		
 		String chosen = chooser.choose(choices);
 		String message = chooser.getChoiceStatement(chosen);
 		channel.sendMessage(message);
